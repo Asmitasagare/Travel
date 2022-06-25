@@ -94,7 +94,28 @@ section .box{
 
 @media only screen and (max-width: 600px){
     .inner{
-        width:200px;
+        width:190px;
+    }
+    .ffig{
+      font-family:myFont1;
+      position:relative;
+      margin-top:20%;
+      min-width:130px;
+      max-width:355px;
+      min-height:220px;
+      width:100%;
+      color:red;
+      text-align:left;
+      line-height:1.4em;
+      background-color:#f2eee3;
+      font-size:15px;
+      object-fit: cover;
+      border-radius:10px;
+      padding:10px;
+      border-top-left-radius: 45%;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 5%;
+      border-bottom-right-radius: 45%;
     }
    
 }
@@ -108,10 +129,10 @@ section .box{
   .ffig figcaption{
     position:absolute;
     right:0%;
-    top:50%;
+    top:60%;
     left:0;
     transform:translateY(-50%);
-    padding:20px 0 20px 20px;
+    padding:5px 0 5px 5px;
 }
 .ffig img{
   position:absolute;
@@ -123,7 +144,16 @@ section .box{
   object-fit:fill;
   transform:translate(0%,-10%);
 }
-
+.ffig img{
+  position:absolute;
+  right:0%;
+  top:50%;
+  opacity:1;
+  max-width:100%;
+  max-height: 100%;
+  object-fit:fill;
+  transform:translate(0%,-50%);
+}
 }
 .contact input{
     box-shadow:5px 8px rgb(153, 241, 13);
@@ -198,6 +228,7 @@ figure.container img {
   -webkit-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
+
 }
 figure.container figcaption {
   position: absolute;
@@ -245,6 +276,11 @@ figure.container.hover img {
   transform: rotateX(90deg);
   opacity: 0;
 }
+figcaption mark{
+  font-size:x-large;
+  color:#f395ff;
+  background-color: black;
+}
 figure.container:hover figcaption,
 figure.container.hover figcaption {
   -webkit-transform: rotateX(0deg);
@@ -253,4 +289,42 @@ figure.container.hover figcaption {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-
+@media only screen and (max-width: 600px){
+  figure.container {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    min-width: 230px;
+    max-width: 295px;
+    max-height: 220px;
+    width: 100%;
+    color: #ffffff;
+    text-align: left;
+    background-color: #07090c;
+    font-size: 7px;
+    -webkit-perspective: 50em;
+    perspective: 50em;
+    padding:5px;
+    margin-top: 10%;
+    border-radius: 5px;
+  }
+  figure.container h3 {
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size:20px;
+  }
+  figure figcaption mark{
+    font-size: 10px;
+  }
+  figure.container h3,
+  figure.container p {
+    line-height: 1.1em;
+  }
+  figure.container .more {
+    border: 2px solid #ffffff;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+  }
+}
